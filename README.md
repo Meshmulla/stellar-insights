@@ -294,11 +294,12 @@ See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for data integration details.
 - [x] Documentation & architecture
 
 ### Phase 2: Backend & Smart Contract
-- [x] Rust analytics engine ✅ **NEW**
-- [x] Anchor metrics computation ✅ **NEW**
-- [x] Database schema & persistence ✅ **NEW**
-- [x] REST API endpoints ✅ **NEW**
-- [ ] Stellar RPC integration
+- [x] Rust analytics engine ✅
+- [x] Anchor metrics computation ✅
+- [x] Database schema & persistence ✅
+- [x] REST API endpoints ✅
+- [x] Stellar RPC integration ✅ **NEW**
+- [x] Data ingestion pipeline ✅ **NEW**
 - [ ] Soroban smart contract deployment
 - [ ] On-chain snapshot anchoring
 
