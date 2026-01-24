@@ -1,12 +1,35 @@
 {
   "generators": {
-    "address": 1,
+    "address": 2,
     "nonce": 0
   },
   "auth": [
     [],
-    [],
-    [],
+    [
+      [
+        "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+        {
+          "function": {
+            "contract_fn": {
+              "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
+              "function_name": "submit_snapshot",
+              "args": [
+                {
+                  "u64": 1
+                },
+                {
+                  "bytes": "0000303900000000000000000000000000000000000000000000000000000000"
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
+                }
+              ]
+            }
+          },
+          "sub_invocations": []
+        }
+      ]
+    ],
     []
   ],
   "ledger": {
@@ -26,46 +49,6 @@
             "key": {
               "vec": [
                 {
-                  "symbol": "LatestEpoch"
-                }
-              ]
-            },
-            "durability": "persistent"
-          }
-        },
-        [
-          {
-            "last_modified_ledger_seq": 0,
-            "data": {
-              "contract_data": {
-                "ext": "v0",
-                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-                "key": {
-                  "vec": [
-                    {
-                      "symbol": "LatestEpoch"
-                    }
-                  ]
-                },
-                "durability": "persistent",
-                "val": {
-                  "u64": 2
-                }
-              }
-            },
-            "ext": "v0"
-          },
-          4095
-        ]
-      ],
-      [
-        {
-          "contract_data": {
-            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-            "key": {
-              "vec": [
-                {
-
                   "symbol": "Snapshots"
                 }
               ]
@@ -109,41 +92,7 @@
                               "symbol": "hash"
                             },
                             "val": {
-                              "bytes": "1111111111111111"
-                              "bytes": "1111111111111111111111111111111111111111111111111111111111111111"
-                            }
-                          },
-                          {
-                            "key": {
-                              "symbol": "timestamp"
-                            },
-                            "val": {
-                              "u64": 0
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "key": {
-                        "u64": 2
-                      },
-                      "val": {
-                        "map": [
-                          {
-                            "key": {
-                              "symbol": "epoch"
-                            },
-                            "val": {
-                              "u64": 2
-                            }
-                          },
-                          {
-                            "key": {
-                              "symbol": "hash"
-                            },
-                            "val": {
-
+                              "bytes": "0000303900000000000000000000000000000000000000000000000000000000"
                             }
                           },
                           {
@@ -188,7 +137,32 @@
                     "executable": {
                       "wasm": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
                     },
-                    "storage": null
+                    "storage": [
+                      {
+                        "key": {
+                          "vec": [
+                            {
+                              "symbol": "Admin"
+                            }
+                          ]
+                        },
+                        "val": {
+                          "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
+                        }
+                      },
+                      {
+                        "key": {
+                          "vec": [
+                            {
+                              "symbol": "LatestEpoch"
+                            }
+                          ]
+                        },
+                        "val": {
+                          "u64": 1
+                        }
+                      }
+                    ]
                   }
                 }
               }
@@ -196,6 +170,39 @@
             "ext": "v0"
           },
           4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+            "key": {
+              "ledger_key_nonce": {
+                "nonce": 801925984706572462
+              }
+            },
+            "durability": "temporary"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                "key": {
+                  "ledger_key_nonce": {
+                    "nonce": 801925984706572462
+                  }
+                },
+                "durability": "temporary",
+                "val": "void"
+              }
+            },
+            "ext": "v0"
+          },
+          6311999
         ]
       ],
       [
@@ -237,49 +244,11 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "submit_snapshot"
+                "symbol": "initialize"
               }
             ],
             "data": {
-              "vec": [
-                {
-                  "bytes": "1111111111111111"
-                  "bytes": "1111111111111111111111111111111111111111111111111111111111111111"
-                },
-                {
-                  "u64": 1
-                }
-              ]
-            }
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": "0000000000000000000000000000000000000000000000000000000000000001",
-        "type_": "contract",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "SNAP_SUB"
-              }
-            ],
-            "data": {
-              "vec": [
-                {
-
-                },
-                {
-                  "u64": 1
-                },
-                {
-                  "u64": 0
-                }
-              ]
+              "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
             }
           }
         }
@@ -298,12 +267,10 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "submit_snapshot"
+                "symbol": "initialize"
               }
             ],
-            "data": {
-              "u64": 0
-            }
+            "data": "void"
           }
         }
       },
@@ -330,10 +297,13 @@
             "data": {
               "vec": [
                 {
-
+                  "u64": 1
                 },
                 {
-                  "u64": 2
+                  "bytes": "0000303900000000000000000000000000000000000000000000000000000000"
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
                 }
               ]
             }
@@ -352,88 +322,6 @@
             "topics": [
               {
                 "symbol": "SNAP_SUB"
-              }
-            ],
-            "data": {
-              "vec": [
-                {
-
-                },
-                {
-                  "u64": 2
-                },
-                {
-                  "u64": 0
-                }
-              ]
-            }
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": "0000000000000000000000000000000000000000000000000000000000000001",
-        "type_": "diagnostic",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "fn_return"
-              },
-              {
-                "symbol": "submit_snapshot"
-              }
-            ],
-            "data": {
-              "u64": 0
-            }
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": null,
-        "type_": "diagnostic",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "fn_call"
-              },
-              {
-                "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
-              },
-              {
-                "symbol": "get_snapshot"
-              }
-            ],
-            "data": {
-              "u64": 1
-            }
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": "0000000000000000000000000000000000000000000000000000000000000001",
-        "type_": "diagnostic",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "fn_return"
-              },
-              {
-                "symbol": "get_snapshot"
               }
             ],
             "data": {
@@ -451,7 +339,7 @@
                     "symbol": "hash"
                   },
                   "val": {
-                    "bytes": "1111111111111111"
+                    "bytes": "0000303900000000000000000000000000000000000000000000000000000000"
                   }
                 },
                 {
@@ -463,7 +351,29 @@
                   }
                 }
               ]
-
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000001",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "submit_snapshot"
+              }
+            ],
+            "data": {
+              "u64": 0
             }
           }
         }
@@ -485,12 +395,10 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "get_snapshot"
+                "symbol": "get_latest_epoch"
               }
             ],
-            "data": {
-              "u64": 2
-            }
+            "data": "void"
           }
         }
       },
@@ -508,38 +416,11 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_snapshot"
+                "symbol": "get_latest_epoch"
               }
             ],
             "data": {
-              "map": [
-                {
-                  "key": {
-                    "symbol": "epoch"
-                  },
-                  "val": {
-                    "u64": 2
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "hash"
-                  },
-                  "val": {
-                    "bytes": "2222222222222222"
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "timestamp"
-                  },
-                  "val": {
-                    "u64": 0
-                  }
-                }
-              ]
-              "bytes": "2222222222222222222222222222222222222222222222222222222222222222"
-
+              "u64": 1
             }
           }
         }
