@@ -81,6 +81,9 @@ stellar-insights/
 - `GET /api/prices/convert?asset=XLM:native&amount=100` - Convert asset amount to USD
 - `GET /api/prices/cache-stats` - Get price cache statistics
 
+**Cost Calculator Endpoint:**
+- `POST /api/cost-calculator/estimate` - Estimate cross-border payment costs and compare routes
+
 **RPC Endpoints:**
 - `GET /api/rpc/health` - Network health check
 - `GET /api/rpc/payments` - Recent payments
@@ -196,6 +199,7 @@ We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for guideline
 - [RPC Integration Summary](./docs/RPC_INTEGRATION_SUMMARY.md) - Integration overview
 - [SEP-24](./docs/SEP24.md) - Hosted Deposit/Withdrawal
 - [SEP-31](./docs/SEP31.md) - Cross-Border Payments
+- [Cost Calculator](./docs/COST_CALCULATOR.md) - Route-by-route payment cost estimation
 - [Account Merges](./docs/ACCOUNT_MERGES.md) - Account merge detection and analytics
 - [CONTRIBUTING.md](./CONTRIBUTING.md) - Development guidelines
 - [Remaining Issues](./issues/REMAINING-ISSUES-022-090.md) - Development tasks
