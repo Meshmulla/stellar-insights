@@ -1,16 +1,18 @@
- # PWA Offline Support TODO
+# TODO: Remove console.logs and use centralized logger
 
-## [x] 1. Checkout feat/pwa-offline
-## [x] 2. Install next-pwa
-## [x] 3. Update next.config.ts with withPWA
+**Progress: 2/7 steps complete**
 
-## [ ] 3. Update next.config.ts with withPWA
-## [ ] 4. Create public/manifest.json
-## [ ] 5. Create public/sw.js (custom cache strategy)
-## [ ] 6. Add app icons
-## [ ] 7. Test service worker registration
-## [ ] 8. Vitest tests for PWA
-## [ ] 9. Commit & PR to main
-## [ ] 10. Lighthouse audit
+1. [ ] Checkout branch: `git checkout -b blackboxai/remove-console-logs-centralized-logger`
+2. [ ] ✅ Create TODO.md (this file)
+3. [✅] Edit batch 1 files (network-graph/route.ts, useChartExport.ts, alerts/page.tsx, chart-export.ts)
+4. [ ] Edit batch 2 files (KeyboardShortcutsContext.tsx, WebSocketErrorBoundary.tsx, OnChainVerification.tsx, analytics-api.ts)
+5. [ ] Edit batch 3 files (keyboard-shortcuts/registry.ts, ChartErrorBoundary.tsx, EnhancedNotificationCenter/useEnhancedNotificationCenter.ts, ChartExportButton.tsx)
+6. [ ] Edit remaining files + run `pnpm test` + commit
+7. [ ] Create PR: `gh pr create --title "Remove console logs: use centralized logger" --body "Replaces 33 console.* with logger (error/warn/info/debug). Prod-safe, redacts sensitive data. Tests pass." --base main`
 
-**Goal**: Cache static assets/critical routes for offline, skip API cache for fresh data, dev disabled.
+**Notes:**
+- 33 console matches in 15+ frontend/src files.
+- logger.ts: dev-only verbose, always error + tracking, redacts keys/addresses.
+- No perf/security issues.
+- Update this file after each step.
+
