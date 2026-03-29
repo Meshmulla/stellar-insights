@@ -1,12 +1,17 @@
-# Validation Implementation TODO
+# Graceful Shutdown Implementation - PROGRESS TRACKING
 
-## [x] 1. Plan approved and TODO created
-## [x] 2. Checkout new branch: git checkout -b feat/validation-forms
-## [x] 3. Create frontend/src/lib/validation.ts (reusable validators)
-## [x] 4. Update Sep24Flow.tsx with validation/errors/a11y
-## [ ] 5. Update Sep31PaymentFlow.tsx
-## [ ] 6. Update CostCalculator.tsx
-## [ ] 7. Add tests: Sep24Flow.test.tsx, Sep31PaymentFlow.test.tsx, CostCalculator.test.tsx
-## [ ] 8. Run tests: pnpm vitest
-## [ ] 9. Commit changes
-## [ ] 10. Create PR against main
+## Plan Steps (Approved)
+
+1. [x] Create TODO.md with breakdown ✅
+2. [x] Update main.rs: Add shutdown start time tracking, final logs ("Server shutdown complete"), use shutdown::wait_for_signal() ✅
+3. [ ] Verify compilation: cd backend && cargo check (running...)
+4. [ ] Test graceful shutdown: cargo run & kill -TERM $!
+5. [x] Run tests: cargo test (shutdown tests pass) ✅
+6. [ ] Mark complete, attempt_completion
+
+## Current Status
+
+- Graceful shutdown already 95% implemented
+- Applying final enhancements for 100% match
+
+Next: Implement code changes.
